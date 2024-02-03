@@ -1,4 +1,7 @@
-function Finished({ points, totalPoints, dispatch }) {
+import { useQuiz } from '../context/QuizContext';
+
+function Finished() {
+	const { points, totalPoints, dispatch } = useQuiz();
 	const percetage = Math.ceil((points / totalPoints) * 100);
 
 	return (
